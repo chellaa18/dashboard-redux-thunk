@@ -1,30 +1,27 @@
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Card from "./Card";
-import Registration from "./Registration";
-import Login from "./Login";
-import Dashboard from "./Dashboard";
-
-function PrivateRoute({ element }) {
-  const isAuthenticated = localStorage.getItem("loggedInUser"); // Your authentication logic here
-
-  if (isAuthenticated) {
-    return element;
-  } else {
-    // Redirect to the login page if not authenticated
-    return <Navigate to="/login" />;
-  }
-}
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./components/home/Home";
+import Nav from "./components/header/Nav";
+import Footer from "./components/footer/Footer";
+import Form from "./components/form/Form";
+import Card from "./components/card/Card";
+import { ViewProduct } from "./components/viewproduct/ViewProduct";
+import Login from "./components/login/Login";
 
 function App() {
   return (
-    <div className="App bg-dark">
+    <div className="App">
+      <Nav />
+
       <Routes>
-        <Route path="/" element={<Registration />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<Form />} />
         <Route path="/login" element={<Login />} />
         <Route path="/card" element={<Card />} />
-        <Route path="/dashboard" element={<PrivateRoute element={<Dashboard />} />} />
+        <Route path="/viewproduct/:id" element={<ViewProduct />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 }

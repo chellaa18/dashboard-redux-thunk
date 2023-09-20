@@ -1,39 +1,198 @@
 .App {
-  text-align: center;
+  background-color: #010101;
   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  color: white !important;
+  background-color: rgba(255, 0, 174, 0.12) !important;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: transform 1s;
+  border: 1px solid #d51c9a !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-img-top{
+  padding-top: 20px;
+  margin: 0 auto;
+  height: 150px !important;
+  width: 150px !important;
+}
+.pro-button {
+  color: #d51c9a;
+  background-color: #010101;
+  font-size: 12px !important;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+}
+.view-button{
+  color: #ffffff;
+  background-color: #d51c9a;
+  font-size: 12px !important;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-btn {
+  color: #ffffff;
+  background-color: #d51c9a;
+  font-size: 14px !important;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* header section  */
+.sidebar {
+  background-color: #010101;
+}
+.navbar-toggler-icon {
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background: #d51c9a;
+  background-image: var(--bs-navbar-toggler-icon-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+.btn-close {
+  background-color: #d51c9a !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-nav input {
+  width: 40%;
+  padding: 6px 0px 6px 20px;
+  border-radius: 50px;
+  background-color: #0f0f10;
+  border: 1px solid #6d6d72;
+}
+.navbar-nav input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(213, 28, 154);
+}
+/* .navbar-nav .search-icon {
+  top: 15px;
+  right: 610px;
+} */
+.navbar-nav input::placeholder {
+  font-size: 14px !important;
+}
+.navbar-nav li a {
+  font-weight: 900;
+  font-size: 12px !important;
+}
+.nav-button {
+  color: rgb(139, 225, 236) !important;
+  background-color: #010101;
+  font-size: 12px !important;
+  font-weight: 900;
+  border: 2px solid  #d51c9a ;
+  border-radius: 10px;
+}
+.navbar-nav li a:hover {
+  color: #d51c9a !important;
+}
+.nav-button:hover {
+  color: #d51c9a !important;
+
 }
 
-.App-link {
-  color: #61dafb;
+.banner-btn-1 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(to left, #fc01ac, rgb(13, 227, 255)) 1;
+  padding: 8px 30px 8px 30px;
+}
+.banner-btn-1:hover {
+  /* background-color: #d51c9a !important; */
+  color: #d63fa6;
+  border: 2px solid rgb(13, 227, 255);
+  border-radius: 15px;
+}
+.banner-btn-2 {
+  color: #d51c9a;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px 10px 30px;
+}
+.banner-btn-2:hover {
+  color: rgb(13, 227, 255) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .back-linear {
+  position: relative;
+  z-index: 1;
+}
+.back-linear::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to bottom right,
+    rgba(44, 178, 231, 0.6),
+    rgba(235, 45, 252, 0.3)
+  );
+  inset: -2px;
+  filter: blur(5rem);
+  z-index: -4;
+} */
+.banner-col-1 img {
+  position: absolute;
+  bottom: 45px;
+  left: 50px;
+  z-index: -2;
+}
+.banner-col-2 img {
+  position: absolute;
+  top: -105px;
+  left: 30px;
+  z-index: 2;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.form-control {
+  background: #181818 !important;
+  border-color: #d51c9a !important;
+  color: #ffffff !important;
+}
+
+.form-control::placeholder{
+  color: rgb(51, 45, 45) !important;
+}
+.form-control:focus {
+  background: #212529;
+  box-shadow: 0 0 15px #d63fa6 !important;
+}
+
+#footer {
+  background: #161515;
+}
+
+form{
+  border: 1px solid #fc01ac;
+}
+
+.input-group-text{
+  background-color: #fc01ac !important;
+  border: none !important;
 }
